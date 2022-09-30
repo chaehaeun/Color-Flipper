@@ -1,0 +1,105 @@
+@import url("./reset.css");
+
+body{
+  width: 100%;
+  background-color:rgb(117, 198, 182);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-family: 'GongGothicMedium';
+  position: relative;
+}
+
+.wrap{
+  margin: 0 auto;
+  width: 700px;
+  height: 400px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  position: relative;
+  
+}
+
+.alertCopy{
+  position: absolute;
+  background-color: rgb(34, 34, 34);
+  font-weight: 300;
+  color:#fff;
+  padding:20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border: 1px solid #fff;
+  display: none;
+}
+.alertCopy.on{
+  display: block;
+}
+
+.nav__center h1{
+  font-size: 50px;
+}
+.nav__center p{
+  font-size: 20px;
+  margin-top: -5px;
+  font-weight: 300;
+}
+
+.viewHexCode{
+  margin: 40px 0;
+  font-size: 40px;
+  cursor: pointer;
+  background-color: #222;
+  display: inline-block;
+  padding:10px 30px;
+  color:#fff;
+  transition: 0.3s ease-out;
+}
+.viewHexCode:hover{
+  transform: scale(1.03);
+}
+
+
+.changeColor{
+  /* background-color: #222; */
+  border:1px solid #222;
+  color:#222;
+  padding: 10px;
+  animation: btnMove 1s infinite;
+  transition: 0.3s;
+  transform: perspective(1px) translateZ(0);
+backface-visibility: hidden;
+}
+
+@keyframes btnMove {
+  0% {
+    transition: 0.3s;
+    transform: perspective(1px) translateZ(0);
+  backface-visibility: hidden;
+    transform: scale(0.99);
+  }
+  50% {
+    transition: 0.3s;
+    transform: perspective(1px) translateZ(0);
+  backface-visibility: hidden;
+    transform: scale(1.03);
+  }
+  100% {
+    transition: 0.3s;
+    transform: perspective(1px) translateZ(0);
+  backface-visibility: hidden;
+    transform: scale(0.99);
+  }
+}
+
+
+.changeColor:hover{
+  animation: none;
+  background-color: #222;
+  color:#fff;
+}
+
